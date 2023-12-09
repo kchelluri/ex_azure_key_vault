@@ -109,6 +109,7 @@ defmodule ExAzureKeyVault.Client do
          %Client{} = client <- bearer_token |> Client.new(vault_name, APIVersion.version()) do
       client
     else
+      IO.inspect("ERROR")
       {:error, reason} -> {:error, reason}
     end
   end
